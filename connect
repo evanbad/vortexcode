@@ -1,4 +1,4 @@
-function getusername() {
+
 function getSort() {
     if (ranking1 == "1") {
       return "a";
@@ -62,4 +62,4 @@ var username =
           userData.username +
           "</span></span>";
 
-}
+
