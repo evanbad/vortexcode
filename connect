@@ -1,0 +1,66 @@
+//1 is the highest possible, 2 is the second highest, 3 is slightly higher than default, 4 is the lowest
+
+function getSort() {
+    if (ranking1 == "1") {
+      return "a";
+    } else if (ranking1 == "2") {
+      return "b";
+    } else if (ranking1 == "3") {
+      return "h";
+    } else if (ranking1 == "4") {
+      return "j";
+    }
+};
+
+//set rank before using the function
+
+function getRankColor() {
+    if (rank == "HEAD DEVELOPER") {
+      return "#00ff00";
+    } else if (rank == "DEVELOPER") {
+      return "#ff00b3";
+    } else if (rank == "JR DEVELOPER") {
+      return "#ccff00";
+    } else if (rank == "MODERATOR") {
+      return "#fb00ff";
+    } else if (rank == "SECURITY") {
+      return "#898ecc";
+    } else if (rank == "BETA TESTER") {
+      return "#ff6600";
+    } else if (rank == "VIP") {
+      return "#ffbf00";
+    } else if (rank == "STRAWHAT") {
+      return "#ffff00";
+    } else if (rank == "MEMBER+") {
+      return "#00eaff";
+    } else if (rank == "MEMBER") {
+      return "#0377fc";
+    } else if (rank == "MEMBER-") {
+      return "#003f87";
+    }
+};
+function formatRankColor() {
+    return (
+      "0px 0px 5px " +
+      getRankColor() +
+      ", 0px 0px 10px " +
+      getRankColor() +
+      ", 0px 0px 15px " +
+      getRankColor()
+    );
+  }
+
+//keep in mind the onclick can likely be sent to anything, just currently untested. the +userData.username should NOT be used if replacing the onClick field.
+
+var username =
+          `<span class="` + getSort() + ` hover" onclick='localStorage.setItem("profile", "` +
+          userData.username +
+          `")'><span style='text-shadow: ` +
+          formatRankColor() +
+          ";'>[" +
+          userData.rank +
+          "] " +
+          userData.username +
+          "</span></span>";
+
+//and that's it.
