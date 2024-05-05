@@ -1,5 +1,3 @@
-//1 is the highest possible, 2 is the second highest, 3 is slightly higher than default, 4 is the lowest
-
 function getSort() {
     if (ranking1 == "1") {
       return "a";
@@ -12,7 +10,7 @@ function getSort() {
     }
 };
 
-//set rank before using the function
+
 
 function getRankColor() {
     if (rank == "HEAD DEVELOPER") {
@@ -50,7 +48,7 @@ function formatRankColor() {
     );
   }
 
-//keep in mind the onclick can likely be sent to anything, just currently untested. the +userData.username should NOT be used if replacing the onClick field.
+
 
 var username =
           `<span class="` + getSort() + ` hover" onclick='localStorage.setItem("profile", "` +
@@ -63,4 +61,4 @@ var username =
           userData.username +
           "</span></span>";
 
-//and that's it.
+
